@@ -1,5 +1,7 @@
 # meta files
 .metadata/
+**/metadata/*
+/metadata/
 # Compiled class file
 *.class
 
