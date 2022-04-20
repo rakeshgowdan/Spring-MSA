@@ -13,7 +13,7 @@ import com.rakesh.microservice.currencyexchangeservice.dao.CurrencyExchangeRepos
 import com.rakesh.microservice.currencyexchangeservice.dto.CurrenyExchange;
 
 @RestController
-@RequestMapping("/api/v1/currency-exchange")
+@RequestMapping("/api/v1/currency-exchange-service")
 public class CurrencyRateController {
 
 	@Autowired
