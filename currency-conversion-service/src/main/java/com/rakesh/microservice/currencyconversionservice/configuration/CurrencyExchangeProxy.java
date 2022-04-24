@@ -11,7 +11,7 @@ import com.rakesh.microservice.currencyconversionservice.dto.CurrencyConversion;
 @FeignClient(name="currency-exchange-service")
 public interface CurrencyExchangeProxy {
 
-	@GetMapping("api/v1/currency-exchange/from/{from}/to/{to}")
+	@GetMapping("/api/v1/currency-exchange-service/from/{from}/to/{to}")
 	public CurrencyConversion convertCurrency(@PathVariable String from,@PathVariable String to); 
 	
 }

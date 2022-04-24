@@ -15,7 +15,7 @@ import com.rakesh.microservice.currencyconversionservice.configuration.CurrencyE
 import com.rakesh.microservice.currencyconversionservice.dto.CurrencyConversion;
 
 @RestController
-@RequestMapping("/api/v1/currency-conversion")
+@RequestMapping("/api/v1/currency-conversion-service")
 public class CurrencyConversionController {
 
 	
@@ -30,7 +30,7 @@ public class CurrencyConversionController {
 		uriVariables.put("to", to);
 		ResponseEntity<CurrencyConversion> responseEntity=
 		new RestTemplate().
-		getForEntity("http://localhost:8000/api/v1/currency-exchange/from/{from}/to/{to}", 
+		getForEntity("http://localhost:8000/api/v1/currency-exchange-service/from/{from}/to/{to}", 
 				CurrencyConversion.class,uriVariables);
 		
 		CurrencyConversion currencyConversion= responseEntity.getBody();

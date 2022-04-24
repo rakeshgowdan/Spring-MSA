@@ -32,7 +32,7 @@ public class APIGatewayConfiguration {
 	@Bean
 	public RouteLocator gatewayRouterForCurrencyConversion(RouteLocatorBuilder builder) {
 		Function<PredicateSpec, Buildable<Route>> routeFunction =
-				p -> p.path("/api/v1/currency-conversion/**")  //accessing path
+				p -> p.path("/api/v1/currency-conversion-service/**")  //accessing path
 				.uri("lb://currency-conversion-service"); //name in eureka 
 		return builder.routes().route(routeFunction).build();
 	}
